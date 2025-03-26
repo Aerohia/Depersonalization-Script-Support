@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Depersonalization Script",
+	"patterns": 
+	[
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": 
+	{
+		"variable": 
+		{
+			"patterns": 
+			[{
+				"name": "keyword.type.dpnscript",
+				"match": "^(.*[^\\s:])\\s*:\\s*$"
+			}]
+		},
+		"keywords": 
+		{
+			"patterns": 
+			[{
+				"name": "keyword.control.dpnscript",
+				"match": "\\b(背景音乐:|结束后保留音乐|图片内容:|文本内容|清理文本内容|大成功事件|大失败事件|成功事件|失败事件|事件内容|选项内容|特质限制:|特质奖励:|标题内容|特写|文本内容|)\\b"
+			}]
+		},
+		"strings": 
+		{
+			"name": "string.quoted.double.dpnscript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": 
+			[
+				{
+					"name": "constant.character.escape.dpnscript",
+					"match": "\\\\."
+				}
+			]
+		}
+
+	},
+	"scopeName": "source.dpn"
+}

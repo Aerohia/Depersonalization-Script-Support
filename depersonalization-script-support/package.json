@@ -1,0 +1,30 @@
+{
+  "name": "depersonalization-script-support",
+  "displayName": "Depersonalization Script Support",
+  "description": "",
+  "version": "0.0.1",
+  "engines": 
+  {
+    "vscode": "^1.98.0"
+  },
+  "categories": 
+  [
+    "Programming Languages"
+  ],
+  "contributes": 
+  {
+    "languages": 
+    [{
+      "id": "dpnscript",
+      "aliases": ["Depersonalization Script", "dpnscript"],
+      "extensions": [".dpn"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": 
+    [{
+      "language": "dpnscript",
+      "scopeName": "source.dpn",
+      "path": "./syntaxes/dpnscript.tmLanguage.json"
+    }]
+  }
+}
